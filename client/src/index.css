@@ -1,1 +1,24 @@
 @import "~materialize-css/dist/css/materialize.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
+
+h1 {
+  font-family: 'Syncopate', sans-serif;
+  font-weight: 700;
+}
+
+.header {
+  text-align: center;
+}
+
+.card {
+  border-radius: 8px;
+}
+
+.card .card-action:last-child {
+  border-radius: 0 0 8px 8px;
+}
+
+.btn, .btn-large, .btn-small, .btn-flat {
+  border-radius: 4px;
+  margin-right: .5rem;
+}
