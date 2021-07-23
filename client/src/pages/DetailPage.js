@@ -7,7 +7,7 @@ import LinkCard from '../components/LinkCard'
 
 function DetailPage() {
   const {token} = React.useContext(AuthContext)
-  const {request, loading} = useHttp()
+  const {request, isLoading} = useHttp()
   const [link, setLink] = React.useState(null)
   const linkId = useParams().id
 
@@ -25,13 +25,13 @@ function DetailPage() {
     getLink()
   }, [getLink])
 
-  if (loading) {
+  if (isLoading) {
     return <Loader />
   }
 
   return (
     <>
-      {!loading && link && <LinkCard link={link} />}
+      {!isLoading && link && <LinkCard link={link} />}
     </>
   )
 }

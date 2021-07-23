@@ -15,6 +15,7 @@ function App() {
   if (!isReady) {
     return <Loader />
   }
+  
   return(
     <AuthContext.Provider value={{login, logout, token, userId, isAuthenticated}}>
     <Router>
