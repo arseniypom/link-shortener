@@ -36,7 +36,13 @@ router.post(
     const user = User({email, password: hashedPassword})
 
     await user.save()
-    res.status(201).json({message: 'Registration complete!'})
+    const token = jwt.sign(
+      {userId: user.id},
+      config.get('jwtSecret'),
+      {expiresIn: '1h'}
+    )
+
+    res.status(201).json({token, userId: user.id, message: 'Registration complete!'})
     
   } catch (error) {
     res.status(500).json({message: 'Something went wrong, please try again'})
