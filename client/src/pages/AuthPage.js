@@ -18,6 +18,10 @@ function AuthPage() {
     clearError()
   }, [error, message, clearError])
 
+  React.useEffect(() => {
+    window.M.updateTextFields()
+  }, [])
+
   const inputHandler = (e) => {
     setForm({
       ...form,

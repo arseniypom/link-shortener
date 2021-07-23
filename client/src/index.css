@@ -1,7 +1,7 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
 
-h1 {
+h1, .brand-logo {
   font-family: 'Syncopate', sans-serif;
   font-weight: 700;
 }
