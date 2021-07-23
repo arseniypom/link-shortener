@@ -32,11 +32,11 @@ router.post(
       res.status(400).json({message: 'This email is already registered, please use it to log in'})
     }
 
-    const hashedPassword = await bcrypt.hash(pasword, 12)
+    const hashedPassword = await bcrypt.hash(password, 12)
     const user = User({email, password: hashedPassword})
 
     await user.save()
-    res.status(201).json({message: 'User has been created'})
+    res.status(201).json({message: 'Registration complete!'})
     
   } catch (error) {
     res.status(500).json({message: 'Something went wrong, please try again'})
