@@ -14,8 +14,10 @@ h1, .brand-logo {
   pointer-events: none;
 }
 
-nav .nav-wrapper {
-  padding: 0 2rem;
+@media (min-width: 768px) {
+  nav .nav-wrapper {
+    padding: 0 2rem;
+  }  
 }
 
 .card {
@@ -31,6 +33,37 @@ nav .nav-wrapper {
   margin-right: .5rem;
 }
 
+.link-card__text {
+  max-width: 50rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
 .link-card__text p {
   word-break: break-word;
+}
+
+.rotate-device {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+}
+
+.rotate-device img {
+  width: 100%;
+  max-width: 10rem;
+}
+
+@media all and (orientation:portrait) {
+  .rotate-device {
+    display: flex;
+  }
 }
