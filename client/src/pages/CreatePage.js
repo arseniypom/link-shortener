@@ -13,8 +13,8 @@ function CreatePage() {
     window.M.updateTextFields()
   }, [])
 
-  const pressHandler = async (e) => {
-    if (e.key === 'Enter') {
+  const createHandler = async (e) => {
+    if (e.key === 'Enter' || e.target.name === 'action') {
       try {
         const data = await request('/api/link/generate', 'POST', {from: link}, {
           Authorization: `Bearer ${auth.token}`
@@ -34,10 +34,13 @@ function CreatePage() {
             className="validate"
             value={link}
             onChange={(e) => setLink(e.target.value)}
-            onKeyPress={pressHandler}
+            onKeyPress={createHandler}
           />
           <label htmlFor="email">Create Link</label>
         </div>
+        <button onClick={createHandler} className="btn waves-effect waves-light purple accent-3" type="submit" name="action">Create
+          <i className="material-icons right">send</i>
+        </button>
       </div>
     </div>
   )

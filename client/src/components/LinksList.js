@@ -6,8 +6,12 @@ function LinksList({links}) {
     return <p className="center">No Links yet :P</p>
   }
 
+  const truncateString = (str, n) => {
+    return (str.length > n) ? str.substr(0, n-1) + '...' : str;
+  };
+
   return (
-    <table>
+    <table className="responsive-table">
       <thead>
         <tr>
           <th>№</th>
@@ -22,7 +26,7 @@ function LinksList({links}) {
           return (
             <tr key={link._id}>
               <td>{++i}</td>
-              <td>{link.from}</td>
+              <td>{truncateString(link.from, 40)}</td>
               <td>{link.to}</td>
               <td>
                 <Link to={`/detail/${link._id}`}>Open</Link>

@@ -29,7 +29,7 @@ router.post(
 
     const candidate = await User.findOne({email: email})
     if (candidate) {
-      res.status(400).json({message: 'This email is already registered, please use it to log in'})
+      return res.status(400).json({message: 'This email is already registered, please use it to log in'})
     }
 
     const hashedPassword = await bcrypt.hash(password, 12)
