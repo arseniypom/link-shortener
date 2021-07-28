@@ -27,6 +27,7 @@ export const useHttp = () => {
     } catch (error) {
       setLoading(false)
       setError(error.message)
+      console.log(error.message);
       throw error
     }
   }, [])

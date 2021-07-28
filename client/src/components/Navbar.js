@@ -13,7 +13,7 @@ function Navbar() {
 
   React.useEffect(() => {
     const elems = document.querySelectorAll('.sidenav');
-    const instances = window.M.Sidenav.init(elems);
+    window.M.Sidenav.init(elems);
   }, [])
 
   const sidenavClickHandle = () => {
@@ -27,7 +27,7 @@ function Navbar() {
       <nav className="deep-purple accent-1">
         <div className="nav-wrapper">
           <span className="brand-logo">L––R</span>
-          <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
+          <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
           <ul className="right hide-on-med-and-down">
             <li><NavLink to="/create">Create</NavLink></li>
             <li><NavLink to="/links">Links</NavLink></li>

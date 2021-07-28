@@ -10,12 +10,15 @@ router.post('/generate', auth, async (req, res) => {
     const baseUrl = config.get('baseUrl')
     const {from} = req.body
 
-    const code = nanoid()
-
     const existing = await Link.findOne({from})
-
     if (existing) {
       return res.json({link: existing})
+    }
+
+    let code = '7yl2uPo0JJF0ZSI6B0toQ123456'
+    const overlap = await Link.findOne({code})
+    if (overlap) {
+      code = nanoid(40)
     }
 
     const to = baseUrl + '/t/' + code

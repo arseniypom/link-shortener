@@ -10,6 +10,14 @@ h1, .brand-logo {
   text-align: center;
 }
 
+.btn > * {
+  pointer-events: none;
+}
+
+nav .nav-wrapper {
+  padding: 0 2rem;
+}
+
 .card {
   border-radius: 8px;
 }
@@ -21,4 +29,8 @@ h1, .brand-logo {
 .btn, .btn-large, .btn-small, .btn-flat {
   border-radius: 4px;
   margin-right: .5rem;
+}
+
+.link-card__text p {
+  word-break: break-word;
 }
