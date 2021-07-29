@@ -6,8 +6,8 @@ function LandingPage() {
     <div className="container landing">
       <h1 className="header">LINKER</h1>
       <div className="decorative decorative-1 deep-purple accent-1">
-        <p>Easily get clicks' statistics of any link !</p>
-        <p><strong>LINKER</strong> will help you to generate a unique link from yours in <span className="underlined">one</span> step to track its clicks</p>
+        <p>Easily transform any link to a unique one and get its clicks' statistics !</p>
+        <p><strong>LINKER</strong> will help you do that in only <span className="underlined">one</span> step</p>
       </div>
       <div className="decorative decorative-2 grey lighten-3">
         <p className="deep-purple-text text-accent-1">Ready to start off ??</p>

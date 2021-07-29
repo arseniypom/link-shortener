@@ -20,7 +20,7 @@ function LinksList({links}) {
             <th>№</th>
             <th>Original Link</th>
             <th>New Link</th>
-            <th>Open</th>
+            <th>Info</th>
           </tr>
         </thead>
 
@@ -32,7 +32,7 @@ function LinksList({links}) {
                 <td>{truncateString(link.from, 30)}</td>
                 <td>{truncateString(link.to, 30)}</td>
                 <td>
-                  <Link to={`/detail/${link._id}`}>Open</Link>
+                  <Link to={`/detail/${link._id}`}>See more...</Link>
                 </td>
               </tr>
             )
