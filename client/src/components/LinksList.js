@@ -19,7 +19,7 @@ function LinksList({links}) {
           <tr>
             <th>№</th>
             <th>Original Link</th>
-            <th>Shortened Link</th>
+            <th>New Link</th>
             <th>Open</th>
           </tr>
         </thead>
@@ -29,8 +29,8 @@ function LinksList({links}) {
             return (
               <tr key={link._id}>
                 <td>{++i}</td>
-                <td>{truncateString(link.from, 40)}</td>
-                <td>{link.to}</td>
+                <td>{truncateString(link.from, 30)}</td>
+                <td>{truncateString(link.to, 30)}</td>
                 <td>
                   <Link to={`/detail/${link._id}`}>Open</Link>
                 </td>
@@ -42,7 +42,7 @@ function LinksList({links}) {
 
       <div className="rotate-device">
         <img src={rotateDeviceImg} alt="rotate device" />
-        <p className="#b388ff deep-purple-text text-accent-1">Please rotate your device</p>
+        <p className="#b388ff deep-purple-text text-accent-1">Please rotate your device to view the table</p>
       </div>
     </>
   )

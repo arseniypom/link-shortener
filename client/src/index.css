@@ -6,6 +6,15 @@ h1, .brand-logo {
   font-weight: 700;
 }
 
+a:hover, .underlined {
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+}
+
+strong {
+  font-weight: 700;
+}
+
 .header {
   text-align: center;
 }
@@ -65,5 +74,57 @@ h1, .brand-logo {
 @media all and (orientation:portrait) {
   .rotate-device {
     display: flex;
+  }
+}
+
+.container.landing {
+  position: relative;
+  max-width: 850px;
+}
+
+.container.landing .header {
+  position: relative;
+  z-index: 10;
+}
+
+.decorative {
+  position: absolute;
+  padding: 1rem;
+  color: #fff;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 1.5rem;
+}
+
+.decorative-1 {
+  width: 30rem;
+  height: fit-content;
+  min-height: 20rem;
+  left: 0;
+  top: 2.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.decorative-2 {
+  width: 30rem;
+  height: fit-content;
+  right: 0;
+  top: 23rem;
+}
+
+@media (max-width: 425px) {
+  .decorative {
+    font-size: 1rem;
+  }
+
+  .decorative-1 {
+    width: 20rem;
+    left: -1rem;
+    top: 2.5rem;
+    padding-bottom: 0;
+  }
+  .decorative-2 {
+    width: 20rem;
+    right: -1rem;
+    top: 17rem;
   }
 }

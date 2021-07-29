@@ -81,7 +81,7 @@ function AuthPage() {
           </div>
           <div className="card-action">
             <button
-              className="btn purple accent-3"
+              className="btn deep-purple accent-1"
               onClick={loginHandler}
               disabled={isLoading}
             >

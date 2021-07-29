@@ -38,7 +38,7 @@ function CreatePage() {
           />
           <label htmlFor="email">Create Link</label>
         </div>
-        <button onClick={createHandler} className="btn waves-effect waves-light purple accent-3" type="submit" name="action">Create
+        <button onClick={createHandler} className="btn waves-effect waves-light deep-purple accent-1" type="submit" name="action">Create
           <i className="material-icons right">send</i>
         </button>
       </div>
