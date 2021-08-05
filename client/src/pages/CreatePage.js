@@ -16,7 +16,7 @@ function CreatePage() {
   const createHandler = async (e) => {
     if (e.key === 'Enter' || e.target.name === 'action') {
       try {
-        const data = await request('/api/link/generate', 'POST', {from: link}, {
+        const data = await request('/api/link/generate', 'POST', {from: link, date: Date.now()}, {
           Authorization: `Bearer ${auth.token}`
         })
         history.push(`/detail/${data.link._id}`)
