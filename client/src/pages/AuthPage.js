@@ -96,6 +96,13 @@ function AuthPage() {
             </button>
           </div>
         </div>
+        <div>
+          <p className="grey-text">Test account:
+          <br />
+          <strong>Email</strong>: <span className="deep-purple-text text-accent-1">test@gmail.com</span>
+          <br />
+          <strong>Password:</strong> <span className="deep-purple-text text-accent-1">test123</span></p>
+        </div>
       </div>
     </div>
   )
